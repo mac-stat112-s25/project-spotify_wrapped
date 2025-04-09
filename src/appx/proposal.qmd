@@ -2,7 +2,7 @@
 title: "Proposal"
 ---
 
-Acoustic Characteristics of Top Billboard Songs
+Title: Acoustic Characteristics of Top Billboard Songs
 By: Ava Ortiz, Yu Yan, Jay Mirman, Martha Miller
 
 We will be exploring features of songs that make the top 100 Billboards. Looking at trends for the specific areas that tend to do well on the chart.
