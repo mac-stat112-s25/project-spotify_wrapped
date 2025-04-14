@@ -52,10 +52,10 @@ book:
         
     - part: "Explaratory Data Analysis"
       chapters:
-        - src/EDA/A.O_EDA.qmd
-        - src/EDA/M.M_EDA.qmd
-        - src/EDA/J.M_EDA.qmd
-        - src/EDA/Y.Y_EDA.qmd
+        - src/EDA/ava-o_eda.qmd
+        - src/EDA/jay-m_eda.qmd
+        - src/EDA/martha-m_eda.qmd
+        - src/EDA/yu-y_eda.qmd
   
   appendices:
   - src/appx/proposal.qmd
