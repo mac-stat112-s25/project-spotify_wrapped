@@ -4,3 +4,8 @@ format: html
 ---
 
 EDA
+
+```{r}
+
+```
+
