@@ -6,6 +6,9 @@ format: html
 EDA
 
 ```{r}
+library(tidyverse)
+
+spotify_data <- read.csv("../data/billboard.csv")
 
 ```
 
