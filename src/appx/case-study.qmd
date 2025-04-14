@@ -3,3 +3,7 @@ title: "Case Study"
 ---
 
 Your case study will go here.
+
+As a group, 
+study one of the professional reported linked in the expectation section of the project description page
+
