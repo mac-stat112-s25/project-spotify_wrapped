@@ -57,6 +57,7 @@ book:
         - src/EDA/martha-m_eda.qmd
         - src/EDA/yu-y_eda.qmd
   
+  
   appendices:
   - src/appx/proposal.qmd
   - src/appx/case-study.qmd
