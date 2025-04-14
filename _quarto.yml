@@ -11,7 +11,7 @@ project:
 
 
 book:
-  title: "project title"
+  title: "Acoustic Characteristics of Top Billboard Songs"
   author: ["student 1 first and last name", "student 2 first and last name", "student 3 first and last name"]
   date: today  # use today to update date published based on last time project was edited
   date-format: full
