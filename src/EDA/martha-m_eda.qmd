@@ -1,5 +1,5 @@
 ---
-title: "Martha Miller"
+title: "Martha M"
 format: html
 ---
 Exploratory Data Analysis (EDA)
