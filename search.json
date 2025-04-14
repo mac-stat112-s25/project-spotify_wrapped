@@ -1,0 +1,78 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "project title",
+    "section": "",
+    "text": "Your report will go here.\n\n# this is a test code",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Report</span>"
+    ]
+  },
+  {
+    "objectID": "src/et/A.O.html",
+    "href": "src/et/A.O.html",
+    "title": "2  A.O",
+    "section": "",
+    "text": "This article mainly discussed the skills and methods of leadership in a group, but also touched on methods of facilitating good group work and progress. These methods were primarily clear communication, recognizing the emotions (particularly frustration) that may come up during a team project, and ensuring that each member gets to contribute in some way to the product. This article also mentioned some specific examples for difficulties that may arise and the ways to address them. One of these examples was frustration that may arise due to not reaching a consensus. To reach a consensus in the first place, it is suggested to set time limits on the discussion and make sure a consensus is reached by the end of the time. They also mention that if a consensus is reached very quickly, it is good to probe each team member individually and ensure that everyone is comfortable with the decision reached.\nThe link to the article can be found below:\nhttps://hr.berkeley.edu/hr-network/central-guide-managing-hr/managing-hr/interaction/team-building/steps",
+    "crumbs": [
+      "Effective Teamwork",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>A.O</span>"
+    ]
+  },
+  {
+    "objectID": "src/et/M.M.html",
+    "href": "src/et/M.M.html",
+    "title": "3  Martha Miller",
+    "section": "",
+    "text": "Effective Teamwork\nIn the article “The Secrets of Great Teamwork” by Martine Haas and Mark Mortensen, published in the Harvard Business Review, the authors explore what makes modern teams effective in a constantly shifting work environment. The article highlights four key enabling conditions for team success:\n1.Compelling Direction – Teams need clear, engaging goals that are challenging yet attainable.\n\nStrong Structure – Diversity in skillset, defined roles, and appropriate team size contribute to productivity.\nSupportive Context – Access to resources, training, and reward systems motivates teams to perform better.\nShared Mindset – Developing trust and a sense of unity, especially among remote or global teams, ensures alignment and smoother collaboration.\n\nThe article emphasizes that while technology and global connectivity have changed how teams operate, foundational teamwork principles still apply. Teams thrive when leadership fosters clarity, communication, and cohesion.\nThe Secrets of Great Teamwork - Harvard Business Review",
+    "crumbs": [
+      "Effective Teamwork",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Martha Miller</span>"
+    ]
+  },
+  {
+    "objectID": "src/et/J.M.html",
+    "href": "src/et/J.M.html",
+    "title": "4  J.M. Effective Teamwork Reading",
+    "section": "",
+    "text": "This article touches on some of the important aspects of creating a healthy team enviroment, mostly centering on listening well and offering genuine feedback. The article emphasizes that we should not view disagreements as conflicts but as curiosities. The article also stresses that we should push each other’s boundaryies to encourage exploration of new ideas\nArticle Link https://www.reflectionpoint.org/whitepapers/unlock-the-collective-intelligence-advantage?gad_source=1&gclid=CjwKCAjw–K_BhB5EiwAuwYoyjdGNkHNn-BjM0WQaxHngVfe7b4OvZFb30ET9QY-MOTIahIMf54JtxoCO-MQAvD_BwE",
+    "crumbs": [
+      "Effective Teamwork",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>J.M. Effective Teamwork Reading</span>"
+    ]
+  },
+  {
+    "objectID": "src/EDA/M.M_EDA.html",
+    "href": "src/EDA/M.M_EDA.html",
+    "title": "7  Martha Miller",
+    "section": "",
+    "text": "Exploratory Data Analysis (EDA)\nIn this project, we explore the acoustic characteristics of songs that reach the Billboard Hot 100, focusing on what makes certain tracks rise to the top. Using data from Billboard chart rankings and Spotify audio features, our goal is to analyze patterns in the types of songs that perform well commercially.\nWe were inspired to pursue this topic because of Spotify’s massive popularity with our generation. The platform’s audio data provides an excellent way to understand the sonic traits that may influence a song’s success on the charts.\n\n7.0.1 Datasets Used\n\nBillboard Hot 100 (billboard.csv)\nContains weekly chart data for over 327,000 song entries, including:\n\nweek_position (chart rank)\npeak_position (best chart rank)\nweeks_on_chart (total duration on chart)\nsong_id, song, and performer identifiers\n\nSpotify Audio Features (audio_features.csv)\nContains audio metrics for ~29,500 songs, such as:\n\ndanceability, energy, valence (mood and vibe)\ntempo, loudness, speechiness, acousticness\nspotify_track_popularity (Spotify’s internal score)\n\n\n\n\n7.0.2 Our Analytical Focus\nWe plan to merge these two datasets using song_id, then analyze how Spotify’s audio features correlate with chart success. Our key research questions include:\n\nWhat sonic traits are most common among Top 10 Billboard songs?\nHave these traits changed over time (e.g. 1990s vs. 2010s)?\nAre certain genres or moods (e.g. high energy, low acousticness) more likely to chart higher?\n\nWe’re particularly interested in identifying whether there’s a “formula” for chart success — or whether it’s more about industry trends, artist fame, or randomness.",
+    "crumbs": [
+      "Explaratory Data Analysis",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Martha Miller</span>"
+    ]
+  },
+  {
+    "objectID": "src/appx/proposal.html",
+    "href": "src/appx/proposal.html",
+    "title": "Appendix A — Proposal",
+    "section": "",
+    "text": "Title: Acoustic Characteristics of Top Billboard Songs By: Ava Ortiz, Yu Yan, Jay Mirman, Martha Miller\nWe will be exploring features of songs that make the top 100 Billboards. Looking at trends for the specific areas that tend to do well on the chart.\nWe chose this project because of the popularity of Spotify for our generation and our interest in learning about acoustic characteristics of songs.\nMONDAY 04/14 -Summarize/understand data - plan/assign viz\nMartha- Ava- Yu- Jay-\nWEDNESDAY 04/16 -Data wrangling (if still needed) -Look into enhancing viz techniques\nMartha- Ava- Yu- Jay-\nFRIDAY 04/18 -Rough viz complete\nMartha- Ava- Yu- Jay-\nMONDAY 04/21 -Preliminary research -Report Writing (outline complete) -Start slideshow\nMartha- Ava- Yu- Jay-\nWEDNESDAY 04/23 -Write report -Finalize viz\nMartha- Ava- Yu- Jay-\nFRIDAY 04/25 -Report writing (basically complete) -Formatting complete -Finalize slideshow\nMartha- Ava- Yu- Jay-",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Proposal</span>"
+    ]
+  },
+  {
+    "objectID": "src/appx/case-study.html",
+    "href": "src/appx/case-study.html",
+    "title": "Appendix B — Case Study",
+    "section": "",
+    "text": "Your case study will go here.\nAs a group, study one of the professional reported linked in the expectation section of the project description page",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Case Study</span>"
+    ]
+  }
+]
