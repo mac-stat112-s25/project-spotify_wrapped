@@ -38,12 +38,17 @@ book:
   chapters:
     - index.qmd
     
+    - part: "Data"
+      chapters: 
+        - data/audio_features.csv
+        - data/billboard.csv
+    
     - part: "Effective Teamwork"
       chapters: 
-        - src/et/A.O.qmd
-        - src/et/M.M.qmd
-        - src/et/J.M.qmd
-        - src/et/Y.Y.qmd
+        - src/et/ava-o_et.qmd
+        - src/et/jay-m_et.qmd
+        - src/et/martha-m_et.qmd
+        - src/et/yu-y_et.qmd
         
     - part: "Explaratory Data Analysis"
       chapters:
