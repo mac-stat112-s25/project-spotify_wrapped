@@ -2,8 +2,17 @@
 title: "Case Study"
 ---
 
-Your case study will go here.
+The article is about how Uber's rise affected taxi services in New York City. The key takeaway is that Uber did not cause a surge in total pickups. It replaced traditional taxis, especially in Manhattan. From April to June 2015, Uber added over 4 million rides in Manhattan, and taxis lost nearly the same number. Uber's impact was more about shifting people's preferences on the type of ride, not increasing overall traffic.
 
-As a group, 
-study one of the professional reported linked in the expectation section of the project description page
+The visualizations in the article include a line chart, choropleth maps, and a scatterplot.
 
+Line chart: It compares yellow cabs, green cabs, and Uber pickups from April–June 2014 to April–June 2015. It shows that Uber pickups were rising and yellow cab pickups were declining.
+
+Choropleth maps: A set of three choropleth maps (Cabs + Uber, Cabs Only, Uber Only) visualize pickup changes across NYC. The maps use a red-to-blue color scale that is intuitive: red means more pickups, blue means fewer, and the maps make the patterns clear.
+
+Scatterplot: It shows changes in Uber pickups versus taxi pickups for each Manhattan neighborhood. It includes a negative-slope best fit line to show the trend in rides: Uber was replacing taxis. 
+
+These visualizations use plain language to explain what each chart shows, and the choice of colors is intuitive and meaningful. The charts are placed next to the related text, so readers don’t have to scroll back and forth. The labels and annotations are clear and help readers understand patterns without needing prior knowledge about data.
+
+
+article link: https://fivethirtyeight.com/features/uber-is-taking-millions-of-manhattan-rides-away-from-taxis/
