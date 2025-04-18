@@ -2,3 +2,31 @@
 title: "Project Work"
 ---
 
+Research Question: What is the relationship between acoustic features and popularity of a song? Are their trends in features that increase the popularity of a song?
+
+**Variables needed for characteristics / acoustic features:**
+(audio_features)
+acousticness
+danceability
+energy
+instrumentalness
+key
+liveness
+loudness
+speechiness
+spotify_track_duration_ms
+tempo
+time_signature
+valence
+
+(billboard)
+
+**Variables needed for popularity measurement:**
+(audio_features)
+spotify_track_popularity
+
+(billboard)
+
+Filter out songs that do not have audio feature data. 
+
+
