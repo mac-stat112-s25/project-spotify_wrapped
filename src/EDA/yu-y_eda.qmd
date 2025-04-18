@@ -4,3 +4,13 @@ format: html
 ---
 
 EDA
+
+```{r}
+library(tidyverse)
+library(DataExplorer)
+
+billboard <- read.csv("../../data/billboard.csv")
+
+create_report(billboard)
+
+```
