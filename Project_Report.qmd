@@ -1,0 +1,48 @@
+---
+title: "Project Report"
+format: html
+---
+
+**Motivation**
+- What is the story behind the project?
+- Why were you interested in the project?
+- What were you motivation?
+- Why is the project important?
+
+**Research Question**
+- What research question(s) are you trying to answer?
+- What are the key goals of the project?
+- What ideas do you most want to communicate?
+
+**Background**
+- What background information is necessary for target audience to understand?
+- What assumptions, terms, and/or acronyms need to be clarified?
+
+**Data**
+- Data collection
+  - What was collected?
+  - When was it collected?
+  - Why was it collected?
+  - How was it collected originally?
+  - Who collected it?
+- Data acquisition
+  - Where / how did you get the data?
+  - What is the source?
+- Data understanding
+  - How much data do you have?
+  - What types of measurements?
+  - Anything you needed to clean before getting started?
+
+**Data Insights**
+It’s your job to explicitly identify and discuss key insights. Don’t simply present the audience with some code and output and expect them to do that work. Specifically address the following questions:
+
+- What are the important takeaways from the data? What was interesting?
+- Why do these takeaways matter?
+- Was there anything surprising?
+- Overall, what do you want the audience to walk away with? What do you want them to   understand about your data and research questions?
+
+**Conclusions / Big Picture**
+- How do the insights connect to answer your research question(s)?
+- Limitations and Future Work
+- What limitations or weaknesses does your data / analysis suffer from?
+- What improvements might someone make to your analysis?
