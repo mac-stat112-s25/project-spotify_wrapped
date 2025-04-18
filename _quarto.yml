@@ -11,8 +11,8 @@ project:
 
 
 book:
-  title: "project title"
-  author: ["student 1 first and last name", "student 2 first and last name", "student 3 first and last name"]
+  title: "Acoustic Characteristics of Top Billboard Songs"
+  author: ["Martha Miller", "Ava Ortiz", "Yu Yan", "Jay Mirman"]
   date: today  # use today to update date published based on last time project was edited
   date-format: full
   # favicon: images/logo.png
@@ -37,11 +37,30 @@ book:
 
   chapters:
     - index.qmd
-
+    
+    - part: "Data"
+      chapters: 
+        - data/audio_features.csv
+        - data/billboard.csv
+    
+    - part: "Effective Teamwork"
+      chapters: 
+        - src/et/ava-o_et.qmd
+        - src/et/jay-m_et.qmd
+        - src/et/martha-m_et.qmd
+        - src/et/yu-y_et.qmd
+        
+    - part: "Explaratory Data Analysis"
+      chapters:
+        - src/EDA/ava-o_eda.qmd
+        - src/EDA/jay-m_eda.qmd
+        - src/EDA/martha-m_eda.qmd
+        - src/EDA/yu-y_eda.qmd
+  
+  
   appendices:
   - src/appx/proposal.qmd
   - src/appx/case-study.qmd
-
 
 
 format:

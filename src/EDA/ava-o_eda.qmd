@@ -1,0 +1,23 @@
+---
+title: "Ava O"
+format: html
+---
+Exploratory Data Analysis (EDA)
+
+Using the **DataExplorer** package, we can get a general understanding of the stucture of and data available in the audio_features dataset. The **create_report** method was used to get a general overview of what data we do have available, general trends in our variables, and characteristics of our variables.
+
+Through this report, we can take away the following **key takeaways**:
+- Not every song within the data set has its acoustic characteristics available. There is around 17% missing acoustic data across every measured acoustic variable. 
+- There are clear and consistent trends seen in the **frequency** of the individual acoustic variables.
+- There is no significant correlation found between any of the audio features, though there there is a slight indication of correlation so this may inform further investigation in this area.
+
+```{r}
+library(tidyverse)
+library(DataExplorer)
+
+audio_features <- read.csv("../../data/audio_features.csv")
+
+create_report(audio_features)
+
+```
+

@@ -2,4 +2,70 @@
 title: "Proposal"
 ---
 
-Your proposal will go here.
+Title: Acoustic Characteristics of Top Billboard Songs
+By: Ava Ortiz, Yu Yan, Jay Mirman, Martha Miller
+
+We will be exploring features of songs that make the top 100 Billboards. Looking at trends for the specific areas that tend to do well on the chart.
+
+We chose this project because of the popularity of Spotify for our generation and our interest in learning about acoustic characteristics of songs.
+
+MONDAY 04/14
+-Summarize/understand data 
+- plan/assign viz
+
+Martha- 
+Ava- 
+Yu-
+Jay-
+
+WEDNESDAY 04/16
+-Data wrangling (if still needed)
+-Look into enhancing viz techniques 
+
+Martha- 
+Ava- 
+Yu-
+Jay-
+
+FRIDAY 04/18
+-Rough viz complete
+
+Martha- 
+Ava- 
+Yu-
+Jay-
+
+
+MONDAY 04/21
+-Preliminary research
+-Report Writing  (outline complete)
+-Start slideshow
+
+Martha- 
+Ava- 
+Yu-
+Jay-
+
+WEDNESDAY 04/23
+-Write report
+-Finalize viz
+
+
+Martha- 
+Ava- 
+Yu-
+Jay-
+
+FRIDAY 04/25
+-Report writing (basically complete)
+-Formatting complete
+-Finalize slideshow
+
+Martha- 
+Ava- 
+Yu-
+Jay-
+
+
+
+
