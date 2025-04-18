@@ -20,23 +20,11 @@ time_signature
 valence
 song
 
-(billboard)
 
 **Variables needed for popularity measurement:**
 (audio_features)
 spotify_track_popularity
 
-(billboard)
-peak_position
-weeks_on_chart
-song
 
 Filter out songs that do not have audio feature data. 
-
-```{r}
-billboard_data <- read.csv("data/billboard.csv")
-```
-```{r}
-summary(billboard_data)
-```
 
