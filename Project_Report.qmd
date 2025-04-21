@@ -10,9 +10,8 @@ format: html
 - Why is the project important?
 
 **Research Question**
-- What research question(s) are you trying to answer?
-- What are the key goals of the project?
-- What ideas do you most want to communicate?
+With this project, we are working to answer the question of whether or not the spotify popularity of a song is impaced by its audio characteristics, and whether there are certain characteristics more associated with high or low popularity. The goal of this project is to see what makes a song popular in terms of its audio characteristics, and whether or not there are certain characteristics more associated with high popularity vs. low popularity. Depending on our results, we want to communicate whether audio characteristics do have an impact on a songs popularity and that there are many factors that are not often thought about that go into determining the popularity of a song.
+
 
 **Background**
 - What background information is necessary for target audience to understand?
@@ -32,6 +31,7 @@ format: html
   - How much data do you have?
   - What types of measurements?
   - Anything you needed to clean before getting started?
+Due to the high number of data points in our data set, and our focus on audio trends in relation to popularity, we decided to limit the number of data points we looked at to understand relative trends in highest vs. lowest popularity songs. This resulted in our focus being on songs with a popularity score of 0 (280 songs) and popularity score of above 85 (225).
 
 **Data Insights**
 It’s your job to explicitly identify and discuss key insights. Don’t simply present the audience with some code and output and expect them to do that work. Specifically address the following questions:
