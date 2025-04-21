@@ -28,3 +28,53 @@ spotify_track_popularity
 
 Filter out songs that do not have audio feature data. 
 
+```{r}
+#Imports
+library(tidyverse)
+```
+```{r}
+#read csv
+audioFeatures <- read.csv("data/audio_features.csv")
+```
+
+```{r}
+#filter to get songs with a popularity score > 85
+audioFeaturesTop <- audioFeatures |>
+  filter(spotify_track_popularity > 85)
+#filter to get songs with a popularity score < 1
+audioFeaturesBottom <- audioFeatures |>
+  filter(spotify_track_popularity < 1)
+```
+
+
+```{r}
+summary(audioFeaturesTop)
+```
+```{r}
+summary(audioFeaturesBottom)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
