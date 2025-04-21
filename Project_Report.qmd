@@ -4,10 +4,8 @@ format: html
 ---
 
 **Motivation**
-- What is the story behind the project?
-- Why were you interested in the project?
-- What were you motivation?
-- Why is the project important?
+When searching for a data set we were intrigued by the variables of audio features and how they contribute to the overall popularity of a song. Music is very relevant in today's culture and our lives, and many people like a wide variety of music. We found it interesting to look at what "hidden" or subconscious elements of the song may play a role into the popular enjoyment of the track. Some of our favorite audio features that we are analyzing for popularity are danceability, valence, and energy. We are curious if these features will play a significant role within the popularity of the track. This project is important as it not only paints a picture for what current audio features tend to make a track popular, but also could help predict popularity of future songs based on their elements. 
+
 
 **Research Question**
 With this project, we are working to answer the question of whether or not the spotify popularity of a song is impaced by its audio characteristics, and whether there are certain characteristics more associated with high or low popularity. The goal of this project is to see what makes a song popular in terms of its audio characteristics, and whether or not there are certain characteristics more associated with high popularity vs. low popularity. Depending on our results, we want to communicate whether audio characteristics do have an impact on a songs popularity and that there are many factors that are not often thought about that go into determining the popularity of a song.
