@@ -37,6 +37,23 @@ library(tidyverse)
 audioFeatures <- read.csv("data/audio_features.csv")
 ```
 
+
+```{r}
+audioFeatures <- audioFeatures |>
+  mutate(max = pmax(danceability,energy,valence,liveness,instrumentalness,acousticness,speechiness))
+
+audioFeatures <- audioFeatures |>
+  mutate(maxCat = ifelse(danceability == max,"danceability",
+                   ifelse(energy == max,"energy",
+                   ifelse(valence == max,"valence",
+                   ifelse(liveness == max,"liveness",
+                   ifelse(instrumentalness == max,"instrumentalness",
+                   ifelse(acousticness == max,"acousticness",
+                   ifelse(speechiness == max,"speechiness",
+                          "N/A"))))))))
+```
+
+
 ```{r}
 #filter to get songs with a popularity score > 85
 audioFeaturesTop <- audioFeatures |>
@@ -54,7 +71,24 @@ summary(audioFeaturesTop)
 summary(audioFeaturesBottom)
 ```
 
+```{r}
+audioFeaturesTop %>%
+  ggplot(aes(x = max, y = spotify_track_popularity, color = maxCat)) +
+  geom_point()
 
+```
+```{r}
+audioFeaturesBottom %>%
+  ggplot(aes(x = max, y = spotify_track_popularity, color = maxCat)) +
+  geom_point()
+
+```
+```{r}
+audioFeatures %>%
+  ggplot(aes(x = max, y = spotify_track_popularity, color = maxCat)) +
+  geom_point()
+
+```
 
 
 
