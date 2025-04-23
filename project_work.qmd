@@ -40,8 +40,12 @@ audioFeatures <- read.csv("data/audio_features.csv")
 
 ```{r}
 audioFeatures <- audioFeatures |>
-  mutate(max = pmax(danceability,energy,valence,liveness,instrumentalness,acousticness,speechiness))
-
+  mutate(max = pmax(danceability,energy,valence,liveness,instrumentalness,acousticness,speechiness)) 
+  
+#removed duplicate entries
+audioFeatures = audioFeatures[!duplicated(audioFeatures$song),]
+  
+#adds max and maxCat variables
 audioFeatures <- audioFeatures |>
   mutate(maxCat = ifelse(danceability == max,"danceability",
                    ifelse(energy == max,"energy",
@@ -51,16 +55,14 @@ audioFeatures <- audioFeatures |>
                    ifelse(acousticness == max,"acousticness",
                    ifelse(speechiness == max,"speechiness",
                           "N/A"))))))))
-```
 
 
-```{r}
 #filter to get songs with a popularity score > 85
 audioFeaturesTop <- audioFeatures |>
   filter(spotify_track_popularity > 85)
-#filter to get songs with a popularity score < 1
+#filter to get songs with a popularity score < 15
 audioFeaturesBottom <- audioFeatures |>
-  filter(spotify_track_popularity < 1)
+  filter(spotify_track_popularity < 15 )
 ```
 
 
@@ -88,6 +90,18 @@ audioFeatures %>%
   ggplot(aes(x = max, y = spotify_track_popularity, color = maxCat)) +
   geom_point()
 
+```
+```{r}
+audioFeatures |>
+  filter(spotify_track_popularity == 100) |>
+  filter(song == "Dance Monkey") |>
+  select(song,danceability,energy,valence,liveness,instrumentalness,acousticness,speechiness) |>
+  pivot_longer(cols = -song, names_to = "characteristic", values_to = "values") |>
+  
+  ggplot(aes(x = characteristic, y = values)) +
+  geom_col() +
+  ylim(c(0, 1)) +
+  labs(title = "Dance Monkey")
 ```
 
 
