@@ -41,7 +41,15 @@ book:
     - part: "Data"
       chapters: 
         - data/audio_features.csv
-        - data/billboard.csv
+        - data/Audio_Features_Data.qmd
+    
+    - part: "Proposal"
+      chapters:
+        - src/appx/proposal.qmd
+
+    - part: "Case Study"
+      chapters:
+        - src/appx/case-study.qmd
     
     - part: "Effective Teamwork"
       chapters: 
@@ -50,7 +58,7 @@ book:
         - src/et/martha-m_et.qmd
         - src/et/yu-y_et.qmd
         
-    - part: "Explaratory Data Analysis"
+    - part: "Explaratory Data Analysis (EDA)"
       chapters:
         - src/EDA/ava-o_eda.qmd
         - src/EDA/jay-m_eda.qmd
@@ -58,9 +66,9 @@ book:
         - src/EDA/yu-y_eda.qmd
   
   
-  appendices:
-  - src/appx/proposal.qmd
-  - src/appx/case-study.qmd
+  # appendices:
+  # - src/appx/proposal.qmd
+  # - src/appx/case-study.qmd
 
 
 format:

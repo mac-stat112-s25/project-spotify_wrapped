@@ -1,8 +1,10 @@
 ---
 title: "Report"
 execute: 
-  echo: true      # change to true to show the code
-code-fold: false  # change to true to fold the code chunks
+  echo: false
+  warning: false
+  error: false      # change to true to show the code
+# code-fold: false  # change to true to fold the code chunks
 ---
 
 Your report will go here.
