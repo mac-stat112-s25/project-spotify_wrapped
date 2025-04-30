@@ -59,12 +59,13 @@ Due to the high number of data points in our data set, and our focus on audio tr
 
 
 **Data Insights**
-It’s your job to explicitly identify and discuss key insights. Don’t simply present the audience with some code and output and expect them to do that work. Specifically address the following questions:
+One thing that stood out was how some audio features differed between the most and least popular songs. Songs with high popularity scores tend to have higher danceability and lower instrumentalness, which makes sense because people enjoy songs that are fun to move to and have vocals. We also noticed that acousticness is higher in popular songs. We expected features like energy to be one of the biggest factors because high energy songs would be more popular intuitively. But some top songs actually have moderate energy levels and it's not the key factor driving popularity.
+These takeaways are useful because they show that certain audio features are tied to what people like or listen to more on Spotify. It's helpful for artist and producer to know what characteristics can make the song popular. 
 
-- What are the important takeaways from the data? What was interesting?
-- Why do these takeaways matter?
-- Was there anything surprising?
-- Overall, what do you want the audience to walk away with? What do you want them to understand about your data and research questions?
+
+
+
+
 
 **Conclusions / Big Picture**
 Through our analysis we found that a higher dancability score is positively associated with a higher popularity, whereas instramentalness is negatively associated with high popularity. Additionally acousticness tends to have higher scores in the top songs. The other characteristics don't necessary show a discernible relationship with popularity. The various limitations of the assignment include: it is a comparison only between one 100 score song and one bottom score song ( trends may not be applicable widely), the features measured are Spotify-based and centered on Spotify user habits and available songs which causes the conclusions to not be generalized to the wider music industry, songs are excluded from the data set due to incomplete data scores. In the future...
