@@ -73,3 +73,10 @@ These takeaways are useful because they show that certain audio features are tie
 **Conclusions / Big Picture: **
 Through our analysis we found that a higher dancability score is positively associated with a higher popularity, whereas instramentalness is negatively associated with high popularity. Additionally acousticness tends to have higher scores in the top songs. The other characteristics don't necessary show a discernible relationship with popularity. The various limitations of the assignment include: it is a comparison only between one 100 score song and one bottom score song ( trends may not be applicable widely), the features measured are Spotify-based and centered on Spotify user habits and available songs which causes the conclusions to not be generalized to the wider music industry, songs are excluded from the data set due to incomplete data scores. In the future...
 
+
+
+
+
+
+
+https://youtu.be/0sk6iWK15po
