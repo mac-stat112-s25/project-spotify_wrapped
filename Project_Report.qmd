@@ -3,6 +3,9 @@ title: "Project Report"
 format: html
 ---
 
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQf6dWJNvEFKmU4v5SdAjgL74fJwlvLELeptMywYPykl-juU4kGQDMyM-i_nmc1S631f2q3rH_4EAHS/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="1920" height="1109" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
 **Motivation**
 When searching for a data set we were intrigued by the variables of audio features and how they contribute to the overall popularity of a song. Music is very relevant in today's culture and our lives, and many people like a wide variety of music. We found it interesting to look at what "hidden" or subconscious elements of the song may play a role into the popular enjoyment of the track. Some of our favorite audio features that we are analyzing for popularity are danceability, valence, and energy. We are curious if these features will play a significant role within the popularity of the track. This project is important as it not only paints a picture for what current audio features tend to make a track popular, but also could help predict popularity of future songs based on their elements. 
 
