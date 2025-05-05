@@ -4,7 +4,7 @@ format: html
 ---
 
 
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQf6dWJNvEFKmU4v5SdAjgL74fJwlvLELeptMywYPykl-juU4kGQDMyM-i_nmc1S631f2q3rH_4EAHS/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="1920" height="1109" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQf6dWJNvEFKmU4v5SdAjgL74fJwlvLELeptMywYPykl-juU4kGQDMyM-i_nmc1S631f2q3rH_4EAHS/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="1000" height="800" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 **Motivation**
 When searching for a data set we were intrigued by the variables of audio features and how they contribute to the overall popularity of a song. Music is very relevant in today's culture and our lives, and many people like a wide variety of music. We found it interesting to look at what "hidden" or subconscious elements of the song may play a role into the popular enjoyment of the track. Some of our favorite audio features that we are analyzing for popularity are danceability, valence, and energy. We are curious if these features will play a significant role within the popularity of the track. This project is important as it not only paints a picture for what current audio features tend to make a track popular, but also could help predict popularity of future songs based on their elements. 
@@ -73,4 +73,3 @@ These takeaways are useful because they show that certain audio features are tie
 **Conclusions / Big Picture**
 Through our analysis we found that a higher dancability score is positively associated with a higher popularity, whereas instramentalness is negatively associated with high popularity. Additionally acousticness tends to have higher scores in the top songs. The other characteristics don't necessary show a discernible relationship with popularity. The various limitations of the assignment include: it is a comparison only between one 100 score song and one bottom score song ( trends may not be applicable widely), the features measured are Spotify-based and centered on Spotify user habits and available songs which causes the conclusions to not be generalized to the wider music industry, songs are excluded from the data set due to incomplete data scores. In the future...
 
-- What improvements might someone make to your analysis?
