@@ -6,7 +6,7 @@ Effective Teamwork
 
 In the article *"The Secrets of Great Teamwork"* by Martine Haas and Mark Mortensen, published in the Harvard Business Review, the authors explore what makes modern teams effective in a constantly shifting work environment. The article highlights four key enabling conditions for team success:
 
-1.**Compelling Direction** – Teams need clear, engaging goals that are challenging yet attainable.
+1. **Compelling Direction** – Teams need clear, engaging goals that are challenging yet attainable.
 
 2. **Strong Structure** – Diversity in skillset, defined roles, and appropriate team size contribute to productivity.
 
