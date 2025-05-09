@@ -38,11 +38,6 @@ book:
   chapters:
     - index.qmd
     
-    - part: "Data"
-      chapters: 
-        - data/audio_features.csv
-        - data/Audio_Features_Data.qmd
-    
     - part: "Proposal"
       chapters:
         - src/appx/proposal.qmd
@@ -66,9 +61,9 @@ book:
         - src/EDA/yu-y_eda.qmd
   
   
-  # appendices:
-  # - src/appx/proposal.qmd
-  # - src/appx/case-study.qmd
+  appendices:
+  - src/appx/proposal.qmd
+  - src/appx/case-study.qmd
 
 
 format:
