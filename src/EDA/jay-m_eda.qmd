@@ -25,10 +25,10 @@ audioFeatures = audioFeatures[!duplicated(audioFeatures$song),]
 
 ```{r}
 
-dim (audio_features)
+dim(audioFeatures)
 
 
-summarise(audio_features)
+summarise(audioFeatures)
 ```
 
 

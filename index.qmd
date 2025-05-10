@@ -9,17 +9,18 @@ execute:
 
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQf6dWJNvEFKmU4v5SdAjgL74fJwlvLELeptMywYPykl-juU4kGQDMyM-i_nmc1S631f2q3rH_4EAHS/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="1000" height="800" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
-*Motivation:*
+**Motivation:**
 
 When searching for a data set we were intrigued by the variables of audio features and how they contribute to the overall popularity of a song. Music is very relevant in today's culture and our lives, and many people like a wide variety of music. We found it interesting to look at what "hidden" or subconscious elements of the song may play a role into the popular enjoyment of the track. Some of our favorite audio features that we are analyzing for popularity are danceability, valence, and energy. We are curious if these features will play a significant role within the popularity of the track. This project is important as it not only paints a picture for what current audio features tend to make a track popular, but also could help predict popularity of future songs based on their elements. 
 
 
-*Research Question:*
+**Research Question:**
 
 With this project, we are working to answer the question of whether or not the Spotify popularity of a song is impacted by its audio characteristics, and whether there are certain characteristics more associated with high or low popularity. The goal of this project is to see what makes a song popular in terms of its audio characteristics, and whether or not there are certain characteristics more associated with high popularity vs. low popularity. Depending on our results, we want to communicate whether audio characteristics do have an impact on a songs popularity and that there are many factors that are not often thought about that go into determining the popularity of a song.
 
 
 **Background: **
+
 To understand the data we need to know what the variables represent and where they are from. The audio features and popularity scores come from the Spotify index. The Spotify Popularity Index measures what is "hot and not" in the music field. It is designed to influence what music listeners will hear. The Popularity Score is a metric that ranks overall songs and albums based on their level of listener engagement and overall appeal on platform. The score ranges from 0-100 and takes into account recent play counts, frequency, and distributions of listens. This popularity then plays a role in when and where these songs are added to Spotify playlists which then enhances the streams. The audio features are also a measurement measured through and by Spotify. A description of each element and what they measure is listed below:
 
 1. *Energy*- Energy is a measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy. For example, death metal has high energy, while a Bach prelude scores low on the scale. Perceptual features contributing to this attribute include dynamic range, perceived loudness, timbre, onset rate, and general entropy.
@@ -183,4 +184,5 @@ Our report : https://www.youtube.com/watch?v=0sk6iWK15po
 
 
 **Conclusions / Big Picture: **
+
 Through our analysis we found that a higher dancability score is positively associated with a higher popularity, whereas instramentalness is negatively associated with high popularity. Additionally acousticness tends to have higher scores in the top songs. The other characteristics don't necessary show a discernible relationship with popularity. The various limitations of the assignment include: it is a comparison only between one 100 score song and one bottom score song ( trends may not be applicable widely), the features measured are Spotify-based and centered on Spotify user habits and available songs which causes the conclusions to not be generalized to the wider music industry, songs are excluded from the data set due to incomplete data scores. 
