@@ -313,13 +313,27 @@ cookieconsent.run({
 </header><p>EDA</p>
 <p>The dataset contains 29,503 songs, each with various audio features like danceability, energy, acousticness, and more. We used this data to analyze the relationship between Spotify popularity and the audio characteristics of songs. After checking for missing values, we found that about 5,100 rows were missing values in features like danceability, energy, valence, and popularity. Around 15,000 rows were missing values for spotify_track_preview_url, which is not essential for our analysis.Looking at the distribution of popularity, most songs have a score between 30 and 70. Very few songs have extremely low or extremely high popularity, and songs with a score above 85 are rare. So, we grouped songs by whether their popularity score was above 85 and looked at the average values of several key audio features.The results show that popular songs are more danceable on average, and instrumentalness is much lower for popular songs. Surprisingly, energy and valence are also lower in popular songs. To answer our research question, we can focus on these audio features and further analyze their relationship with popularity.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-3"><a href="#cb1-3"></a></span>
-<span id="cb1-4"><a href="#cb1-4"></a>spotify <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"../../data/audio_features.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'dplyr'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:stats':
+
+    filter, lag</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb5-2"><a href="#cb5-2"></a></span>
+<span id="cb5-3"><a href="#cb5-3"></a>spotify <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"../../data/audio_features.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">colSums</span>(<span class="fu">is.na</span>(spotify))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">colSums</span>(<span class="fu">is.na</span>(spotify))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                  song_id                 performer                      song 
                         0                         0                         0 
@@ -340,10 +354,10 @@ spotify_track_duration_ms    spotify_track_explicit       spotify_track_album
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">ggplot</span>(spotify, <span class="fu">aes</span>(<span class="at">x =</span> spotify_track_popularity)) <span class="sc">+</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>, <span class="at">fill =</span> <span class="st">"steelblue"</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Distribution of Popularity Score"</span>,</span>
-<span id="cb4-4"><a href="#cb4-4"></a>       <span class="at">x =</span> <span class="st">"Popularity Score"</span>, <span class="at">y =</span> <span class="st">"Count"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">ggplot</span>(spotify, <span class="fu">aes</span>(<span class="at">x =</span> spotify_track_popularity)) <span class="sc">+</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>, <span class="at">fill =</span> <span class="st">"steelblue"</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Distribution of Popularity Score"</span>,</span>
+<span id="cb8-4"><a href="#cb8-4"></a>       <span class="at">x =</span> <span class="st">"Popularity Score"</span>, <span class="at">y =</span> <span class="st">"Count"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Removed 5106 rows containing non-finite outside the scale range
 (`stat_bin()`).</code></pre>
@@ -356,18 +370,18 @@ spotify_track_duration_ms    spotify_track_explicit       spotify_track_album
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>spotify <span class="ot">&lt;-</span> spotify <span class="sc">|&gt;</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a>  <span class="fu">mutate</span>(<span class="at">high_pop =</span> spotify_track_popularity <span class="sc">&gt;</span> <span class="dv">85</span>)</span>
-<span id="cb6-3"><a href="#cb6-3"></a></span>
-<span id="cb6-4"><a href="#cb6-4"></a>spotify <span class="sc">|&gt;</span></span>
-<span id="cb6-5"><a href="#cb6-5"></a>  <span class="fu">group_by</span>(high_pop) <span class="sc">|&gt;</span></span>
-<span id="cb6-6"><a href="#cb6-6"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb6-7"><a href="#cb6-7"></a>    <span class="at">avg_danceability =</span> <span class="fu">mean</span>(danceability, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb6-8"><a href="#cb6-8"></a>    <span class="at">avg_energy =</span> <span class="fu">mean</span>(energy, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb6-9"><a href="#cb6-9"></a>    <span class="at">avg_valence =</span> <span class="fu">mean</span>(valence, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb6-10"><a href="#cb6-10"></a>    <span class="at">avg_acousticness =</span> <span class="fu">mean</span>(acousticness, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb6-11"><a href="#cb6-11"></a>    <span class="at">avg_instrumentalness =</span> <span class="fu">mean</span>(instrumentalness, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb6-12"><a href="#cb6-12"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>spotify <span class="ot">&lt;-</span> spotify <span class="sc">|&gt;</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a>  <span class="fu">mutate</span>(<span class="at">high_pop =</span> spotify_track_popularity <span class="sc">&gt;</span> <span class="dv">85</span>)</span>
+<span id="cb10-3"><a href="#cb10-3"></a></span>
+<span id="cb10-4"><a href="#cb10-4"></a>spotify <span class="sc">|&gt;</span></span>
+<span id="cb10-5"><a href="#cb10-5"></a>  <span class="fu">group_by</span>(high_pop) <span class="sc">|&gt;</span></span>
+<span id="cb10-6"><a href="#cb10-6"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb10-7"><a href="#cb10-7"></a>    <span class="at">avg_danceability =</span> <span class="fu">mean</span>(danceability, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb10-8"><a href="#cb10-8"></a>    <span class="at">avg_energy =</span> <span class="fu">mean</span>(energy, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb10-9"><a href="#cb10-9"></a>    <span class="at">avg_valence =</span> <span class="fu">mean</span>(valence, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb10-10"><a href="#cb10-10"></a>    <span class="at">avg_acousticness =</span> <span class="fu">mean</span>(acousticness, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb10-11"><a href="#cb10-11"></a>    <span class="at">avg_instrumentalness =</span> <span class="fu">mean</span>(instrumentalness, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb10-12"><a href="#cb10-12"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 6
   high_pop avg_danceability avg_energy avg_valence avg_acousticness
@@ -1010,46 +1024,46 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   <div class="nav-page nav-page-next">
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb8" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1"></a><span class="co">---</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a><span class="an">title:</span><span class="co"> "Yu Y"</span></span>
-<span id="cb8-3"><a href="#cb8-3"></a><span class="an">format:</span><span class="co"> html</span></span>
-<span id="cb8-4"><a href="#cb8-4"></a><span class="co">---</span></span>
-<span id="cb8-5"><a href="#cb8-5"></a></span>
-<span id="cb8-6"><a href="#cb8-6"></a>EDA</span>
-<span id="cb8-7"><a href="#cb8-7"></a></span>
-<span id="cb8-8"><a href="#cb8-8"></a>The dataset contains 29,503 songs, each with various audio features like danceability, energy, acousticness, and more. We used this data to analyze the relationship between Spotify popularity and the audio characteristics of songs. After checking for missing values, we found that about 5,100 rows were missing values in features like danceability, energy, valence, and popularity. Around 15,000 rows were missing values for spotify_track_preview_url, which is not essential for our analysis.Looking at the distribution of popularity, most songs have a score between 30 and 70. Very few songs have extremely low or extremely high popularity, and songs with a score above 85 are rare. So, we grouped songs by whether their popularity score was above 85 and looked at the average values of several key audio features.The results show that popular songs are more danceable on average, and instrumentalness is much lower for popular songs. Surprisingly, energy and valence are also lower in popular songs. To answer our research question, we can focus on these audio features and further analyze their relationship with popularity.</span>
-<span id="cb8-9"><a href="#cb8-9"></a></span>
-<span id="cb8-12"><a href="#cb8-12"></a><span class="in">```{r}</span></span>
-<span id="cb8-13"><a href="#cb8-13"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb8-14"><a href="#cb8-14"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb8-15"><a href="#cb8-15"></a></span>
-<span id="cb8-16"><a href="#cb8-16"></a>spotify <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"../../data/audio_features.csv"</span>)</span>
-<span id="cb8-17"><a href="#cb8-17"></a><span class="in">```</span></span>
-<span id="cb8-18"><a href="#cb8-18"></a></span>
-<span id="cb8-21"><a href="#cb8-21"></a><span class="in">```{r}</span></span>
-<span id="cb8-22"><a href="#cb8-22"></a><span class="fu">colSums</span>(<span class="fu">is.na</span>(spotify))</span>
-<span id="cb8-23"><a href="#cb8-23"></a><span class="in">```</span></span>
-<span id="cb8-26"><a href="#cb8-26"></a><span class="in">```{r}</span></span>
-<span id="cb8-27"><a href="#cb8-27"></a><span class="fu">ggplot</span>(spotify, <span class="fu">aes</span>(<span class="at">x =</span> spotify_track_popularity)) <span class="sc">+</span></span>
-<span id="cb8-28"><a href="#cb8-28"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>, <span class="at">fill =</span> <span class="st">"steelblue"</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
-<span id="cb8-29"><a href="#cb8-29"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Distribution of Popularity Score"</span>,</span>
-<span id="cb8-30"><a href="#cb8-30"></a>       <span class="at">x =</span> <span class="st">"Popularity Score"</span>, <span class="at">y =</span> <span class="st">"Count"</span>)</span>
-<span id="cb8-31"><a href="#cb8-31"></a><span class="in">```</span></span>
-<span id="cb8-32"><a href="#cb8-32"></a></span>
-<span id="cb8-35"><a href="#cb8-35"></a><span class="in">```{r}</span></span>
-<span id="cb8-36"><a href="#cb8-36"></a>spotify <span class="ot">&lt;-</span> spotify <span class="sc">|&gt;</span></span>
-<span id="cb8-37"><a href="#cb8-37"></a>  <span class="fu">mutate</span>(<span class="at">high_pop =</span> spotify_track_popularity <span class="sc">&gt;</span> <span class="dv">85</span>)</span>
-<span id="cb8-38"><a href="#cb8-38"></a></span>
-<span id="cb8-39"><a href="#cb8-39"></a>spotify <span class="sc">|&gt;</span></span>
-<span id="cb8-40"><a href="#cb8-40"></a>  <span class="fu">group_by</span>(high_pop) <span class="sc">|&gt;</span></span>
-<span id="cb8-41"><a href="#cb8-41"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb8-42"><a href="#cb8-42"></a>    <span class="at">avg_danceability =</span> <span class="fu">mean</span>(danceability, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb8-43"><a href="#cb8-43"></a>    <span class="at">avg_energy =</span> <span class="fu">mean</span>(energy, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb8-44"><a href="#cb8-44"></a>    <span class="at">avg_valence =</span> <span class="fu">mean</span>(valence, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb8-45"><a href="#cb8-45"></a>    <span class="at">avg_acousticness =</span> <span class="fu">mean</span>(acousticness, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb8-46"><a href="#cb8-46"></a>    <span class="at">avg_instrumentalness =</span> <span class="fu">mean</span>(instrumentalness, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb8-47"><a href="#cb8-47"></a>  )</span>
-<span id="cb8-48"><a href="#cb8-48"></a><span class="in">```</span></span>
+<div class="sourceCode" id="cb12" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1"></a><span class="co">---</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="an">title:</span><span class="co"> "Yu Y"</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a><span class="an">format:</span><span class="co"> html</span></span>
+<span id="cb12-4"><a href="#cb12-4"></a><span class="co">---</span></span>
+<span id="cb12-5"><a href="#cb12-5"></a></span>
+<span id="cb12-6"><a href="#cb12-6"></a>EDA</span>
+<span id="cb12-7"><a href="#cb12-7"></a></span>
+<span id="cb12-8"><a href="#cb12-8"></a>The dataset contains 29,503 songs, each with various audio features like danceability, energy, acousticness, and more. We used this data to analyze the relationship between Spotify popularity and the audio characteristics of songs. After checking for missing values, we found that about 5,100 rows were missing values in features like danceability, energy, valence, and popularity. Around 15,000 rows were missing values for spotify_track_preview_url, which is not essential for our analysis.Looking at the distribution of popularity, most songs have a score between 30 and 70. Very few songs have extremely low or extremely high popularity, and songs with a score above 85 are rare. So, we grouped songs by whether their popularity score was above 85 and looked at the average values of several key audio features.The results show that popular songs are more danceable on average, and instrumentalness is much lower for popular songs. Surprisingly, energy and valence are also lower in popular songs. To answer our research question, we can focus on these audio features and further analyze their relationship with popularity.</span>
+<span id="cb12-9"><a href="#cb12-9"></a></span>
+<span id="cb12-12"><a href="#cb12-12"></a><span class="in">```{r}</span></span>
+<span id="cb12-13"><a href="#cb12-13"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb12-14"><a href="#cb12-14"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb12-15"><a href="#cb12-15"></a></span>
+<span id="cb12-16"><a href="#cb12-16"></a>spotify <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"../../data/audio_features.csv"</span>)</span>
+<span id="cb12-17"><a href="#cb12-17"></a><span class="in">```</span></span>
+<span id="cb12-18"><a href="#cb12-18"></a></span>
+<span id="cb12-21"><a href="#cb12-21"></a><span class="in">```{r}</span></span>
+<span id="cb12-22"><a href="#cb12-22"></a><span class="fu">colSums</span>(<span class="fu">is.na</span>(spotify))</span>
+<span id="cb12-23"><a href="#cb12-23"></a><span class="in">```</span></span>
+<span id="cb12-26"><a href="#cb12-26"></a><span class="in">```{r}</span></span>
+<span id="cb12-27"><a href="#cb12-27"></a><span class="fu">ggplot</span>(spotify, <span class="fu">aes</span>(<span class="at">x =</span> spotify_track_popularity)) <span class="sc">+</span></span>
+<span id="cb12-28"><a href="#cb12-28"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>, <span class="at">fill =</span> <span class="st">"steelblue"</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb12-29"><a href="#cb12-29"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Distribution of Popularity Score"</span>,</span>
+<span id="cb12-30"><a href="#cb12-30"></a>       <span class="at">x =</span> <span class="st">"Popularity Score"</span>, <span class="at">y =</span> <span class="st">"Count"</span>)</span>
+<span id="cb12-31"><a href="#cb12-31"></a><span class="in">```</span></span>
+<span id="cb12-32"><a href="#cb12-32"></a></span>
+<span id="cb12-35"><a href="#cb12-35"></a><span class="in">```{r}</span></span>
+<span id="cb12-36"><a href="#cb12-36"></a>spotify <span class="ot">&lt;-</span> spotify <span class="sc">|&gt;</span></span>
+<span id="cb12-37"><a href="#cb12-37"></a>  <span class="fu">mutate</span>(<span class="at">high_pop =</span> spotify_track_popularity <span class="sc">&gt;</span> <span class="dv">85</span>)</span>
+<span id="cb12-38"><a href="#cb12-38"></a></span>
+<span id="cb12-39"><a href="#cb12-39"></a>spotify <span class="sc">|&gt;</span></span>
+<span id="cb12-40"><a href="#cb12-40"></a>  <span class="fu">group_by</span>(high_pop) <span class="sc">|&gt;</span></span>
+<span id="cb12-41"><a href="#cb12-41"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb12-42"><a href="#cb12-42"></a>    <span class="at">avg_danceability =</span> <span class="fu">mean</span>(danceability, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb12-43"><a href="#cb12-43"></a>    <span class="at">avg_energy =</span> <span class="fu">mean</span>(energy, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb12-44"><a href="#cb12-44"></a>    <span class="at">avg_valence =</span> <span class="fu">mean</span>(valence, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb12-45"><a href="#cb12-45"></a>    <span class="at">avg_acousticness =</span> <span class="fu">mean</span>(acousticness, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb12-46"><a href="#cb12-46"></a>    <span class="at">avg_instrumentalness =</span> <span class="fu">mean</span>(instrumentalness, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb12-47"><a href="#cb12-47"></a>  )</span>
+<span id="cb12-48"><a href="#cb12-48"></a><span class="in">```</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
