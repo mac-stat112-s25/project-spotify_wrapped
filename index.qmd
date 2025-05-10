@@ -69,7 +69,6 @@ Due to the high number of data points in our data set, and our focus on audio tr
 ```{r}
 #Imports
 library(tidyverse)
-# library(viridis)
 ```
 ```{r}
 #read csv
@@ -180,7 +179,7 @@ These takeaways are useful because they show that certain audio features are tie
 
 
 
-
+Our report : https://www.youtube.com/watch?v=0sk6iWK15po
 
 
 **Conclusions / Big Picture: **
