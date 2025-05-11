@@ -1,0 +1,41 @@
+---
+title: "Yu Y"
+format: html
+---
+
+EDA
+
+The dataset contains 29,503 songs, each with various audio features like danceability, energy, acousticness, and more. We used this data to analyze the relationship between Spotify popularity and the audio characteristics of songs. After checking for missing values, we found that about 5,100 rows were missing values in features like danceability, energy, valence, and popularity. Around 15,000 rows were missing values for spotify_track_preview_url, which is not essential for our analysis.Looking at the distribution of popularity, most songs have a score between 30 and 70. Very few songs have extremely low or extremely high popularity, and songs with a score above 85 are rare. So, we grouped songs by whether their popularity score was above 85 and looked at the average values of several key audio features.The results show that popular songs are more danceable on average, and instrumentalness is much lower for popular songs. Surprisingly, energy and valence are also lower in popular songs. To answer our research question, we can focus on these audio features and further analyze their relationship with popularity.
+
+```{r}
+library(dplyr)
+library(ggplot2)
+
+spotify <- read.csv("../../data/audio_features.csv")
+```
+
+```{r}
+colSums(is.na(spotify))
+```
+```{r}
+ggplot(spotify, aes(x = spotify_track_popularity)) +
+  geom_histogram(binwidth = 5, fill = "steelblue", color = "white") +
+  labs(title = "Distribution of Popularity Score",
+       x = "Popularity Score", y = "Count")
+```
+
+```{r}
+spotify <- spotify |>
+  mutate(high_pop = spotify_track_popularity > 85)
+
+spotify |>
+  group_by(high_pop) |>
+  summarise(
+    avg_danceability = mean(danceability, na.rm = TRUE),
+    avg_energy = mean(energy, na.rm = TRUE),
+    avg_valence = mean(valence, na.rm = TRUE),
+    avg_acousticness = mean(acousticness, na.rm = TRUE),
+    avg_instrumentalness = mean(instrumentalness, na.rm = TRUE)
+  )
+```
+

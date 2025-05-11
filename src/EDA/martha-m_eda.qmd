@@ -1,0 +1,35 @@
+---
+title: "Martha M"
+format: html
+---
+Exploratory Data Analysis (EDA)
+
+
+In this project, we explore the **acoustic characteristics of songs that reach the Billboard Hot 100**, focusing on what makes certain tracks rise to the top. Using data from **Billboard chart rankings** and **Spotify audio features**, our goal is to analyze patterns in the types of songs that perform well commercially.
+
+We were inspired to pursue this topic because of Spotify's massive popularity with our generation. The platform's audio data provides an excellent way to understand the sonic traits that may influence a song’s success on the charts.
+
+### Datasets Used
+
+- **Billboard Hot 100** (`billboard.csv`)  
+  Contains weekly chart data for over 327,000 song entries, including:
+  - `week_position` (chart rank)
+  - `peak_position` (best chart rank)
+  - `weeks_on_chart` (total duration on chart)
+  - `song_id`, `song`, and `performer` identifiers
+
+- **Spotify Audio Features** (`audio_features.csv`)  
+  Contains audio metrics for ~29,500 songs, such as:
+  - `danceability`, `energy`, `valence` (mood and vibe)
+  - `tempo`, `loudness`, `speechiness`, `acousticness`
+  - `spotify_track_popularity` (Spotify's internal score)
+
+### Our Analytical Focus
+
+We plan to merge these two datasets using `song_id`, then analyze how Spotify's audio features correlate with chart success. Our key research questions include:
+
+- What sonic traits are most common among Top 10 Billboard songs?
+- Have these traits changed over time (e.g. 1990s vs. 2010s)?
+- Are certain genres or moods (e.g. high energy, low acousticness) more likely to chart higher?
+
+We’re particularly interested in identifying whether there’s a "formula" for chart success — or whether it's more about industry trends, artist fame, or randomness.

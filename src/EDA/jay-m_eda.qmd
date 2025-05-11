@@ -1,0 +1,60 @@
+---
+title: "Jay M"
+format: html
+---
+
+EDA
+
+There are 29503 different songs in this dataset, not all with complete data. There are 22 variables, with some being for identifying the song by artist and genre and album. There are also variables about what type of song it is (IE how insturmental the song is)
+
+
+
+```{r}
+#Imports
+library(tidyverse)
+```
+```{r}
+#read csv
+audioFeatures <- read.csv("../../data/audio_features.csv")
+
+#removed duplicate entries
+audioFeatures = audioFeatures[!duplicated(audioFeatures$song),]
+
+
+```
+
+```{r}
+
+dim(audioFeatures)
+
+
+summarise(audioFeatures)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
