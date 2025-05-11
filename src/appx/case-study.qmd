@@ -15,4 +15,4 @@ Scatterplot: It shows changes in Uber pickups versus taxi pickups for each Manha
 These visualizations use plain language to explain what each chart shows, and the choice of colors is intuitive and meaningful. The charts are placed next to the related text, so readers don’t have to scroll back and forth. The labels and annotations are clear and help readers understand patterns without needing prior knowledge about data.
 
 
-article link: [article] (https://fivethirtyeight.com/features/uber-is-taking-millions-of-manhattan-rides-away-from-taxis/)
+article link: [Uber is Taking Millions of Manhattan Rides Away From Taxis](https://fivethirtyeight.com/features/uber-is-taking-millions-of-manhattan-rides-away-from-taxis)

@@ -38,14 +38,6 @@ book:
   chapters:
     - index.qmd
     
-    - part: "Proposal"
-      chapters:
-        - src/appx/proposal.qmd
-
-    - part: "Case Study"
-      chapters:
-        - src/appx/case-study.qmd
-    
     - part: "Effective Teamwork"
       chapters: 
         - src/et/ava-o_et.qmd

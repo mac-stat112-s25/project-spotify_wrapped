@@ -40,22 +40,18 @@ To understand the data we need to know what the variables represent and where th
 
 Background data on what the audio features mean,[^1] and how Spotify popularity is quantified [^2] was also necessary.
 
-[^1]: https://help.spotontrack.com/article/what-do-the-audio-features-mean
+[^1]: [What Do the Audio Features Mean](https://help.spotontrack.com/article/what-do-the-audio-features-mean)
 
-[^2]: https://www.artist.tools/features/spotify-popularity-index#:~:text=The%20Spotify%20Popularity%20Index%20(or,and%20pitches%20to%20Editorial%20playlists 
+[^2]: [Spotify Popularity Index](https://www.artist.tools/features/spotify-popularity-index)
 
 
 **Data: **
 
 - Data collection
 
-The dataset includes Spotify audio features for over 29,000 songs, including song ID, performer, genre, and a range of acoustic features such as dancebility,   energy, valence, speechiness, instrumentalness, and more. It also includes Spotify popularity score for each song.The data was collected around September, 2021,  as part of the TidyTuesday project released on 09/14/2021. The purpose of collection was to analyze patterns in acoustic features and investigate how these     characteristics relate to song popularity. The data used in this project was originally sourced from Spotify, compiled by Sean Miller, and made available through Data.World.
-  
-- Data acquisition
+The dataset includes Spotify audio features for over 29,000 songs, including song ID, performer, genre, and a range of acoustic features such as dancebility,   energy, valence, speechiness, instrumentalness, and more. It also includes Spotify popularity score for each song.The data was collected around September 2021,  as part of the TidyTuesday project released on 09/14/2021. The purpose of collection was to analyze patterns in acoustic features and investigate how these     characteristics relate to song popularity. The data used in this project was originally sourced from Spotify, compiled by Sean Miller, and made available through Data.World.
 
 The data was downloaded directly from the TidyTuesday GitHub repository, and imported into our local RStudio session for analysis. The data orginates from Spotify and hosted by TidyTuesday.
-
-- Data understanding
 
 The data has 29503 entries and 24 total columns. Acoustic features include: danceability, energy, valence, speechiness, acousticness, instrumentalness, liveness, tempo, loudness
 Other features like like key, mode, duration_ms, time_signature, spotify_track_popularity (range: 0–100) are also included.
@@ -216,7 +212,7 @@ These takeaways are useful because they show that certain audio features are tie
 
 
 
-Our report : https://www.youtube.com/watch?v=0sk6iWK15po
+Our report : [Video Report](https://www.youtube.com/watch?v=0sk6iWK15po)
 
 
 **Conclusions / Big Picture: **
